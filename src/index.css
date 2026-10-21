@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    /* Authentic theme colors extracted directly from shopnonstops-main.zip */
+    --shop-nav-bg: #3321c8;
+    --shop-nav-active: #17dd1f;
+    --shop-search-border: #3957db;
+    --shop-badge: #3bc177;
+    --shop-btn-black: #000000;
+    --shop-cart-red: #f63b60;
+    --shop-sold-green: #68d284;
+    --shop-price-strike: #d55b45;
+    --shop-footer-bar: #342ac8;
+    --shop-footer-bg: #000000;
+    --shop-footer-accent: #56d879;
+    --shop-shop-name: #60a5fa;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    color: #1f2937;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Authentic ShopNonstop Utility Classes */
+.bg-shop-nav {
+  background-color: #3321c8;
+}
+.bg-shop-footer-bar {
+  background-color: #342ac8;
+}
+.bg-shop-badge {
+  background-color: #3bc177;
+}
+.bg-shop-cart-btn {
+  background-color: #f63b60;
+}
+.text-shop-nav-active {
+  color: #17dd1f;
+}
+.text-shop-sold {
+  color: #68d284;
+}
+.text-shop-strike {
+  color: #d55b45;
+}
+.border-shop-search {
+  border-color: #3957db;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

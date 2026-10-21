@@ -1,0 +1,6 @@
+{
+  "name": "ShopNonstop - Multi-Vendor Marketplace",
+  "description": "Full-fledged multi-vendor e-commerce platform with customer storefront, seller portal, admin center, order tracking, and automated Google Sheets sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

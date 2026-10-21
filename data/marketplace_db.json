@@ -1,0 +1,888 @@
+{
+  "platformConfig": {
+    "defaultCommissionRate": 10,
+    "allowDirectVendorRegistration": true,
+    "freeShippingThreshold": 50,
+    "siteName": "ShopNonstop",
+    "currency": "USD",
+    "currencySymbol": "$"
+  },
+  "sheetsConfig": {
+    "webhookUrl": "",
+    "autoSync": true,
+    "lastSyncedAt": "2026-10-21T11:24:05.484Z",
+    "syncCount": 14,
+    "syncLogs": [
+      {
+        "timestamp": "2026-10-21T11:24:05.484Z",
+        "type": "AUTO_SYNC",
+        "status": "success",
+        "message": "Synchronized 14 orders, 4 vendors, and 24 products to Google Sheets buffer."
+      },
+      {
+        "timestamp": "2026-10-20T13:24:05.484Z",
+        "type": "MANUAL_EXPORT",
+        "status": "success",
+        "message": "Exported vendor ledger CSV file."
+      }
+    ]
+  },
+  "users": [
+    {
+      "id": "usr_customer_1",
+      "name": "Alex Morgan",
+      "email": "customer@example.com",
+      "role": "customer",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      "phoneNumber": "+1 (555) 234-5678",
+      "addresses": [
+        {
+          "id": "addr_1",
+          "name": "Alex Morgan",
+          "street": "742 Evergreen Terrace",
+          "city": "Portland",
+          "state": "OR",
+          "zipCode": "97201",
+          "country": "United States",
+          "phone": "+1 (555) 234-5678",
+          "isDefault": true
+        }
+      ],
+      "createdAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": "usr_seller_1",
+      "name": "Marcus Vance",
+      "email": "seller@apextech.com",
+      "role": "seller",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      "phoneNumber": "+1 (555) 876-5432",
+      "shopId": "shop_apex_tech",
+      "addresses": [],
+      "createdAt": "2026-01-10T08:30:00Z"
+    },
+    {
+      "id": "usr_seller_2",
+      "name": "Elena Rostova",
+      "email": "seller@luxethreads.com",
+      "role": "seller",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
+      "phoneNumber": "+1 (555) 345-6789",
+      "shopId": "shop_luxe_threads",
+      "addresses": [],
+      "createdAt": "2026-01-12T14:20:00Z"
+    },
+    {
+      "id": "usr_admin_1",
+      "name": "Platform Administrator",
+      "email": "admin@shopnonstop.com",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80",
+      "phoneNumber": "+1 (555) 999-0000",
+      "addresses": [],
+      "createdAt": "2025-12-01T00:00:00Z"
+    }
+  ],
+  "shops": [
+    {
+      "id": "shop_apex_tech",
+      "ownerId": "usr_seller_1",
+      "name": "Apex Audio & Electronics",
+      "slug": "apex-audio-tech",
+      "description": "Precision-engineered studio monitors, audiophile wireless headphones, and workstation peripherals for creators.",
+      "avatar": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=300&q=80",
+      "banner": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80",
+      "rating": 4.9,
+      "reviewCount": 148,
+      "balance": 3420.5,
+      "pendingBalance": 590,
+      "status": "active",
+      "commissionRate": 10,
+      "phoneNumber": "+1 (555) 876-5432",
+      "address": "Industrial Way 400, Suite 12, Seattle, WA",
+      "bankInfo": {
+        "bankName": "Silicon Valley National Bank",
+        "accountNumber": "**** **** 8821",
+        "holderName": "Apex Audio LLC",
+        "routingOrUpi": "021000021 / apex@upi"
+      },
+      "createdAt": "2026-01-10T09:00:00Z"
+    },
+    {
+      "id": "shop_luxe_threads",
+      "ownerId": "usr_seller_2",
+      "name": "LuxeThreads Atelier",
+      "slug": "luxethreads-atelier",
+      "description": "Modern minimalist apparel, heavy organic cotton knitwear, and timeless utilitarian streetwear.",
+      "avatar": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=300&q=80",
+      "banner": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+      "rating": 4.8,
+      "reviewCount": 92,
+      "balance": 2150,
+      "pendingBalance": 310,
+      "status": "active",
+      "commissionRate": 10,
+      "phoneNumber": "+1 (555) 345-6789",
+      "address": "42 Fashion Blvd, Brooklyn, NY",
+      "bankInfo": {
+        "bankName": "Chase Manhattan Bank",
+        "accountNumber": "**** **** 4192",
+        "holderName": "LuxeThreads Atelier Inc",
+        "routingOrUpi": "021000089 / luxethreads@upi"
+      },
+      "createdAt": "2026-01-12T15:00:00Z"
+    },
+    {
+      "id": "shop_nordic_living",
+      "ownerId": "usr_seller_3",
+      "name": "Nordic Craft Home",
+      "slug": "nordic-craft-home",
+      "description": "Handcrafted stoneware ceramics, sculptural brushed brass lighting, and sustainable oak living decor.",
+      "avatar": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=300&q=80",
+      "banner": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+      "rating": 4.95,
+      "reviewCount": 64,
+      "balance": 1890,
+      "pendingBalance": 420,
+      "status": "active",
+      "commissionRate": 10,
+      "phoneNumber": "+1 (555) 901-2345",
+      "address": "88 Design Avenue, Austin, TX",
+      "bankInfo": {
+        "bankName": "First Republic Bank",
+        "accountNumber": "**** **** 6710",
+        "holderName": "Nordic Craft Collective",
+        "routingOrUpi": "121000358 / nordic@upi"
+      },
+      "createdAt": "2026-01-20T11:00:00Z"
+    },
+    {
+      "id": "shop_velvet_bloom",
+      "ownerId": "usr_seller_4",
+      "name": "Velvet Bloom Botanicals",
+      "slug": "velvet-bloom-botanicals",
+      "description": "Cold-pressed botanical facial serums, clean restorative balms, and small-batch apothecary scents.",
+      "avatar": "https://images.unsplash.com/photo-1608248597359-25797300c377?auto=format&fit=crop&w=300&q=80",
+      "banner": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80",
+      "rating": 4.88,
+      "reviewCount": 110,
+      "balance": 1420,
+      "pendingBalance": 180,
+      "status": "active",
+      "commissionRate": 10,
+      "phoneNumber": "+1 (555) 678-9012",
+      "address": "15 Botanical Court, Santa Monica, CA",
+      "bankInfo": {
+        "bankName": "Wells Fargo Bank",
+        "accountNumber": "**** **** 1198",
+        "holderName": "Velvet Bloom Skincare LLC",
+        "routingOrUpi": "122000247 / velvet@upi"
+      },
+      "createdAt": "2026-01-25T13:45:00Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_apex_anc_headphones",
+      "shopId": "shop_apex_tech",
+      "shopName": "Apex Audio & Electronics",
+      "shopAvatar": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=300&q=80",
+      "title": "Apex Pro Wireless ANC Studio Headphones",
+      "description": "High-resolution wireless acoustic drivers with custom hybrid active noise cancellation, 45-hour playback, memory foam protein leather ear cushions, and lossless low-latency audio codec.",
+      "category": "Electronics",
+      "subCategory": "Audio & Studio",
+      "tags": [
+        "Wireless",
+        "Audiophile",
+        "Noise Cancelling",
+        "Bluetooth 5.3",
+        "Studio"
+      ],
+      "price": 249.99,
+      "discountPrice": 199.99,
+      "stock": 35,
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80"
+      ],
+      "rating": 4.9,
+      "numReviews": 48,
+      "featured": true,
+      "salesCount": 124,
+      "attributes": [
+        {
+          "name": "Driver Size",
+          "value": "40mm Beryllium"
+        },
+        {
+          "name": "Battery Life",
+          "value": "45 Hours"
+        },
+        {
+          "name": "Weight",
+          "value": "265g"
+        },
+        {
+          "name": "Connectivity",
+          "value": "Bluetooth 5.3 / 3.5mm AUX"
+        }
+      ],
+      "createdAt": "2026-01-11T12:00:00Z"
+    },
+    {
+      "id": "prod_apex_mechanical_keyboard",
+      "shopId": "shop_apex_tech",
+      "shopName": "Apex Audio & Electronics",
+      "shopAvatar": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=300&q=80",
+      "title": "Vanguard 75% Gasket-Mount Mechanical Keyboard",
+      "description": "Solid CNC anodized aluminum chassis with hot-swappable tactile linear switches, south-facing RGB, sound-dampening poron foam, and PBT double-shot keycaps.",
+      "category": "Electronics",
+      "subCategory": "Computer Peripherals",
+      "tags": [
+        "Mechanical",
+        "Gasket Mount",
+        "Aluminum",
+        "Gaming",
+        "Productivity"
+      ],
+      "price": 159,
+      "discountPrice": 139,
+      "stock": 22,
+      "images": [
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=800&q=80"
+      ],
+      "rating": 4.85,
+      "numReviews": 32,
+      "featured": true,
+      "salesCount": 89,
+      "attributes": [
+        {
+          "name": "Form Factor",
+          "value": "75% Layout (82 Keys)"
+        },
+        {
+          "name": "Switch Type",
+          "value": "Factory Lubed Linear (45g)"
+        },
+        {
+          "name": "Plate",
+          "value": "FR4 with Poron Gaskets"
+        }
+      ],
+      "createdAt": "2026-01-14T09:15:00Z"
+    },
+    {
+      "id": "prod_luxe_oversized_hoodie",
+      "shopId": "shop_luxe_threads",
+      "shopName": "LuxeThreads Atelier",
+      "shopAvatar": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=300&q=80",
+      "title": "Heavyweight French Terry Oversized Hoodie",
+      "description": "Crafted from 500 GSM custom-milled organic French terry cotton. Features double-layered hood without drawstrings, dropped shoulders, and durable ribbed hems.",
+      "category": "Fashion",
+      "subCategory": "Hoodies & Sweatshirts",
+      "tags": [
+        "Heavyweight",
+        "Organic Cotton",
+        "Streetwear",
+        "Oversized",
+        "Unisex"
+      ],
+      "price": 89,
+      "discountPrice": 75,
+      "stock": 45,
+      "images": [
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80"
+      ],
+      "rating": 4.92,
+      "numReviews": 54,
+      "featured": true,
+      "salesCount": 210,
+      "attributes": [
+        {
+          "name": "Fabric",
+          "value": "100% Organic Cotton (500 GSM)"
+        },
+        {
+          "name": "Fit",
+          "value": "Boxy / Dropped Shoulder"
+        },
+        {
+          "name": "Origin",
+          "value": "Milled in Portugal"
+        }
+      ],
+      "createdAt": "2026-01-15T14:30:00Z"
+    },
+    {
+      "id": "prod_luxe_denim_jacket",
+      "shopId": "shop_luxe_threads",
+      "shopName": "LuxeThreads Atelier",
+      "shopAvatar": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=300&q=80",
+      "title": "Selvedge Raw Denim Trucker Jacket",
+      "description": "14.5 oz Japanese red-line selvedge denim jacket with custom brass shanks, reinforced double-needle chainstitching, and hidden internal utility pockets.",
+      "category": "Fashion",
+      "subCategory": "Jackets & Outerwear",
+      "tags": [
+        "Selvedge",
+        "Raw Denim",
+        "Japanese Fabric",
+        "Heritage",
+        "Trucker"
+      ],
+      "price": 185,
+      "stock": 18,
+      "images": [
+        "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80"
+      ],
+      "rating": 4.8,
+      "numReviews": 29,
+      "featured": false,
+      "salesCount": 65,
+      "attributes": [
+        {
+          "name": "Denim Weight",
+          "value": "14.5 oz Kuroki Mills"
+        },
+        {
+          "name": "Closure",
+          "value": "Custom Antique Brass Shanks"
+        }
+      ],
+      "createdAt": "2026-01-18T10:00:00Z"
+    },
+    {
+      "id": "prod_nordic_stoneware_set",
+      "shopId": "shop_nordic_living",
+      "shopName": "Nordic Craft Home",
+      "shopAvatar": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=300&q=80",
+      "title": "Artisanal Matte Stoneware Dinner Set (12-Piece)",
+      "description": "Wheel-thrown ceramic stoneware dinner set with reactive matte glaze. Includes 4 dinner plates, 4 salad bowls, and 4 breakfast mugs. Dishwasher and microwave safe.",
+      "category": "Home & Living",
+      "subCategory": "Tableware & Dining",
+      "tags": [
+        "Ceramics",
+        "Handmade",
+        "Stoneware",
+        "Dining",
+        "Minimalist"
+      ],
+      "price": 145,
+      "discountPrice": 129,
+      "stock": 14,
+      "images": [
+        "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80"
+      ],
+      "rating": 4.96,
+      "numReviews": 41,
+      "featured": true,
+      "salesCount": 78,
+      "attributes": [
+        {
+          "name": "Material",
+          "value": "High-fire Durable Stoneware"
+        },
+        {
+          "name": "Finish",
+          "value": "Textured Matte Specks"
+        },
+        {
+          "name": "Care",
+          "value": "Dishwasher & Oven Safe to 450°F"
+        }
+      ],
+      "createdAt": "2026-01-22T16:00:00Z"
+    },
+    {
+      "id": "prod_nordic_brass_lamp",
+      "shopId": "shop_nordic_living",
+      "shopName": "Nordic Craft Home",
+      "shopAvatar": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=300&q=80",
+      "title": "Sculptural Spun Brass Accent Table Lamp",
+      "description": "Solid spun brass with hand-brushed matte wax finish. Features soft warm LED diffusion (2700K) and an integrated stepless brass touch dimmer on base.",
+      "category": "Home & Living",
+      "subCategory": "Lighting",
+      "tags": [
+        "Lighting",
+        "Brushed Brass",
+        "Sculptural",
+        "Warm LED",
+        "Dimmable"
+      ],
+      "price": 120,
+      "stock": 20,
+      "images": [
+        "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"
+      ],
+      "rating": 4.9,
+      "numReviews": 23,
+      "featured": false,
+      "salesCount": 42,
+      "attributes": [
+        {
+          "name": "Material",
+          "value": "Solid Heavy Brass"
+        },
+        {
+          "name": "Color Temp",
+          "value": "2700K Warm Ambient"
+        }
+      ],
+      "createdAt": "2026-01-24T10:30:00Z"
+    },
+    {
+      "id": "prod_velvet_restorative_serum",
+      "shopId": "shop_velvet_bloom",
+      "shopName": "Velvet Bloom Botanicals",
+      "shopAvatar": "https://images.unsplash.com/photo-1608248597359-25797300c377?auto=format&fit=crop&w=300&q=80",
+      "title": "Botanical Ceramide Lipid Barrier Serum (30ml)",
+      "description": "Phyto-squalane and rosehip seed restorative lipid elixir infused with multi-molecular hyaluronic acid and fermented green tea extracts for deep barrier nourishment.",
+      "category": "Beauty",
+      "subCategory": "Facial Skincare",
+      "tags": [
+        "Clean Beauty",
+        "Organic",
+        "Serum",
+        "Ceramides",
+        "Vegan"
+      ],
+      "price": 64,
+      "discountPrice": 52,
+      "stock": 60,
+      "images": [
+        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1608248597359-25797300c377?auto=format&fit=crop&w=800&q=80"
+      ],
+      "rating": 4.88,
+      "numReviews": 87,
+      "featured": true,
+      "salesCount": 340,
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "30 ml / 1.0 fl oz"
+        },
+        {
+          "name": "Key Actives",
+          "value": "Phytosqualane 8%, Ceramide NP"
+        },
+        {
+          "name": "Standard",
+          "value": "Cruelty-Free, Paraben-Free, Fragrance-Free"
+        }
+      ],
+      "createdAt": "2026-01-26T12:00:00Z"
+    },
+    {
+      "id": "prod_apex_usb_microphone",
+      "shopId": "shop_apex_tech",
+      "shopName": "Apex Audio & Electronics",
+      "shopAvatar": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=300&q=80",
+      "title": "Apex Clarity Broadcast Condenser Microphone",
+      "description": "Studio-grade 24-bit/96kHz cardioid USB-C condenser microphone with integrated zero-latency headphone monitoring, physical gain knob, and heavy steel shockmount.",
+      "category": "Electronics",
+      "subCategory": "Audio & Studio",
+      "tags": [
+        "Microphone",
+        "Streaming",
+        "Podcast",
+        "USB-C",
+        "Broadcast"
+      ],
+      "price": 119,
+      "discountPrice": 99,
+      "stock": 25,
+      "images": [
+        "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80"
+      ],
+      "rating": 4.87,
+      "numReviews": 38,
+      "featured": false,
+      "salesCount": 95,
+      "attributes": [
+        {
+          "name": "Sample Rate",
+          "value": "24-bit / 96kHz"
+        },
+        {
+          "name": "Polar Pattern",
+          "value": "Cardioid / Omnidirectional"
+        }
+      ],
+      "createdAt": "2026-01-28T09:00:00Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-10492",
+      "userId": "usr_customer_1",
+      "customerName": "Alex Morgan",
+      "customerEmail": "customer@example.com",
+      "customerPhone": "+1 (555) 234-5678",
+      "shippingAddress": {
+        "id": "addr_1",
+        "name": "Alex Morgan",
+        "street": "742 Evergreen Terrace",
+        "city": "Portland",
+        "state": "OR",
+        "zipCode": "97201",
+        "country": "United States",
+        "phone": "+1 (555) 234-5678",
+        "isDefault": true
+      },
+      "paymentMethod": "Credit/Debit Card",
+      "paymentStatus": "Paid",
+      "totalAmount": 274.99,
+      "subOrders": [
+        {
+          "subOrderId": "ORD-10492-V1",
+          "shopId": "shop_apex_tech",
+          "shopName": "Apex Audio & Electronics",
+          "items": [
+            {
+              "productId": "prod_apex_anc_headphones",
+              "title": "Apex Pro Wireless ANC Studio Headphones",
+              "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+              "price": 199.99,
+              "quantity": 1
+            }
+          ],
+          "subtotal": 199.99,
+          "commissionRate": 10,
+          "commissionAmount": 20,
+          "vendorEarnings": 179.99,
+          "status": "Shipped",
+          "trackingCarrier": "FedEx Express",
+          "trackingCode": "FDX-9982410293",
+          "timeline": [
+            {
+              "status": "Order Placed",
+              "date": "2026-10-19T13:24:05.484Z",
+              "note": "Order payment successfully authorized."
+            },
+            {
+              "status": "Confirmed",
+              "date": "2026-10-20T01:24:05.484Z",
+              "note": "Seller confirmed inventory and queued for packaging."
+            },
+            {
+              "status": "Shipped",
+              "date": "2026-10-21T01:24:05.484Z",
+              "note": "Package handed over to carrier at Seattle Regional Sort Facility.",
+              "location": "Seattle, WA"
+            }
+          ]
+        },
+        {
+          "subOrderId": "ORD-10492-V2",
+          "shopId": "shop_luxe_threads",
+          "shopName": "LuxeThreads Atelier",
+          "items": [
+            {
+              "productId": "prod_luxe_oversized_hoodie",
+              "title": "Heavyweight French Terry Oversized Hoodie",
+              "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
+              "price": 75,
+              "quantity": 1
+            }
+          ],
+          "subtotal": 75,
+          "commissionRate": 10,
+          "commissionAmount": 7.5,
+          "vendorEarnings": 67.5,
+          "status": "Delivered",
+          "trackingCarrier": "UPS Ground",
+          "trackingCode": "1Z9999999999999999",
+          "timeline": [
+            {
+              "status": "Order Placed",
+              "date": "2026-10-18T13:24:05.484Z",
+              "note": "Order payment confirmed."
+            },
+            {
+              "status": "Confirmed",
+              "date": "2026-10-19T01:24:05.484Z",
+              "note": "Verified in Brooklyn fulfillment hub."
+            },
+            {
+              "status": "Shipped",
+              "date": "2026-10-19T21:24:05.484Z",
+              "note": "In transit to customer."
+            },
+            {
+              "status": "Delivered",
+              "date": "2026-10-21T05:24:05.484Z",
+              "note": "Delivered to front porch / secure locker.",
+              "location": "Portland, OR"
+            }
+          ]
+        }
+      ],
+      "createdAt": "2026-10-19T13:24:05.484Z",
+      "updatedAt": "2026-10-21T05:24:05.484Z"
+    },
+    {
+      "id": "ORD-10381",
+      "userId": "usr_customer_1",
+      "customerName": "Alex Morgan",
+      "customerEmail": "customer@example.com",
+      "customerPhone": "+1 (555) 234-5678",
+      "shippingAddress": {
+        "id": "addr_1",
+        "name": "Alex Morgan",
+        "street": "742 Evergreen Terrace",
+        "city": "Portland",
+        "state": "OR",
+        "zipCode": "97201",
+        "country": "United States",
+        "phone": "+1 (555) 234-5678",
+        "isDefault": true
+      },
+      "paymentMethod": "UPI / NetBanking",
+      "paymentStatus": "Paid",
+      "totalAmount": 181,
+      "subOrders": [
+        {
+          "subOrderId": "ORD-10381-V1",
+          "shopId": "shop_nordic_living",
+          "shopName": "Nordic Craft Home",
+          "items": [
+            {
+              "productId": "prod_nordic_stoneware_set",
+              "title": "Artisanal Matte Stoneware Dinner Set (12-Piece)",
+              "image": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80",
+              "price": 129,
+              "quantity": 1
+            }
+          ],
+          "subtotal": 129,
+          "commissionRate": 10,
+          "commissionAmount": 12.9,
+          "vendorEarnings": 116.1,
+          "status": "Delivered",
+          "trackingCarrier": "USPS Priority",
+          "trackingCode": "9405511899223190",
+          "timeline": [
+            {
+              "status": "Order Placed",
+              "date": "2026-10-16T13:24:05.484Z",
+              "note": "Payment received via UPI."
+            },
+            {
+              "status": "Delivered",
+              "date": "2026-10-20T13:24:05.484Z",
+              "note": "Package signed by recipient."
+            }
+          ]
+        },
+        {
+          "subOrderId": "ORD-10381-V2",
+          "shopId": "shop_velvet_bloom",
+          "shopName": "Velvet Bloom Botanicals",
+          "items": [
+            {
+              "productId": "prod_velvet_restorative_serum",
+              "title": "Botanical Ceramide Lipid Barrier Serum (30ml)",
+              "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80",
+              "price": 52,
+              "quantity": 1
+            }
+          ],
+          "subtotal": 52,
+          "commissionRate": 10,
+          "commissionAmount": 5.2,
+          "vendorEarnings": 46.8,
+          "status": "Delivered",
+          "trackingCarrier": "DHL Express",
+          "trackingCode": "DHL-489100234",
+          "timeline": [
+            {
+              "status": "Delivered",
+              "date": "2026-10-20T17:24:05.484Z",
+              "note": "Safely delivered."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2026-10-16T13:24:05.485Z",
+      "updatedAt": "2026-10-20T17:24:05.485Z"
+    }
+  ],
+  "withdrawals": [
+    {
+      "id": "wdr_001",
+      "shopId": "shop_apex_tech",
+      "shopName": "Apex Audio & Electronics",
+      "amount": 1200,
+      "method": "Bank Wire Transfer",
+      "accountDetails": "Silicon Valley National Bank (Acct: ****8821)",
+      "status": "Approved",
+      "requestedAt": "2026-10-14T01:24:05.485Z",
+      "processedAt": "2026-10-14T21:24:05.485Z",
+      "adminNote": "Processed via ACH Ref #TXN-98210384"
+    },
+    {
+      "id": "wdr_002",
+      "shopId": "shop_luxe_threads",
+      "shopName": "LuxeThreads Atelier",
+      "amount": 850,
+      "method": "UPI / Direct Bank Transfer",
+      "accountDetails": "Chase Manhattan Bank (Acct: ****4192 / luxethreads@upi)",
+      "status": "Pending",
+      "requestedAt": "2026-10-20T19:24:05.485Z",
+      "adminNote": "Awaiting admin batch payout clearance."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev_1",
+      "productId": "prod_apex_anc_headphones",
+      "productTitle": "Apex Pro Wireless ANC Studio Headphones",
+      "shopId": "shop_apex_tech",
+      "userId": "usr_customer_1",
+      "userName": "Alex Morgan",
+      "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      "rating": 5,
+      "comment": "Incredible acoustic depth and separation. Noise cancellation easily rivals flagship brands. Fast delivery from Apex!",
+      "createdAt": "2026-10-20T13:24:05.485Z"
+    },
+    {
+      "id": "rev_2",
+      "productId": "prod_luxe_oversized_hoodie",
+      "productTitle": "Heavyweight French Terry Oversized Hoodie",
+      "shopId": "shop_luxe_threads",
+      "userId": "usr_customer_1",
+      "userName": "Alex Morgan",
+      "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      "rating": 5,
+      "comment": "The 500 GSM weight feels substantial and luxurious. Shape holds perfectly after wash. Outstanding seller.",
+      "createdAt": "2026-10-21T07:24:05.485Z"
+    }
+  ],
+  "coupons": [
+    {
+      "id": "cpn_shop10",
+      "code": "SHOP10",
+      "discountPercentage": 10,
+      "minAmount": 50,
+      "expiryDate": "2026-12-31T23:59:59Z",
+      "isActive": true,
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "cpn_apex20",
+      "shopId": "shop_apex_tech",
+      "shopName": "Apex Audio & Electronics",
+      "code": "APEX20",
+      "discountPercentage": 20,
+      "minAmount": 150,
+      "expiryDate": "2026-12-31T23:59:59Z",
+      "isActive": true,
+      "createdAt": "2026-01-10T00:00:00Z"
+    },
+    {
+      "id": "cpn_digital15",
+      "code": "DIGITAL15",
+      "discountPercentage": 15,
+      "minAmount": 30,
+      "expiryDate": "2026-12-31T23:59:59Z",
+      "isActive": true,
+      "createdAt": "2026-01-15T00:00:00Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_tech_expo",
+      "title": "Global Tech & Audio Creators Expo",
+      "description": "Exclusive manufacturer discounts on studio audio, mechanical keyboards, and workstation gear.",
+      "bannerUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80",
+      "startDate": "2026-10-01T00:00:00Z",
+      "endDate": "2026-11-15T23:59:59Z",
+      "discountTag": "Up to 30% Off",
+      "featuredProductIds": [
+        "prod_apex_anc_headphones",
+        "prod_apex_mechanical_keyboard"
+      ],
+      "status": "Running"
+    },
+    {
+      "id": "evt_autumn_artisan",
+      "title": "Nordic & Streetwear Autumn Showcase",
+      "description": "Limited edition handcrafted apparel and bespoke stoneware living collections.",
+      "bannerUrl": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+      "startDate": "2026-10-10T00:00:00Z",
+      "endDate": "2026-11-20T23:59:59Z",
+      "discountTag": "Artisan Drops",
+      "featuredProductIds": [
+        "prod_luxe_oversized_hoodie",
+        "prod_nordic_stoneware_set"
+      ],
+      "status": "Running"
+    }
+  ],
+  "vendorEmployees": [
+    {
+      "id": "vemp_apex_1",
+      "shopId": "shop_apex_tech",
+      "name": "Liam Scott",
+      "email": "liam.orders@apextech.com",
+      "roleTitle": "Logistics & Dispatch Manager",
+      "permissions": [
+        "orders",
+        "catalog"
+      ],
+      "createdAt": "2026-01-20T10:00:00Z"
+    },
+    {
+      "id": "vemp_apex_2",
+      "shopId": "shop_apex_tech",
+      "name": "Elena Rostova",
+      "email": "elena.growth@apextech.com",
+      "roleTitle": "Promotions & Campaign Specialist",
+      "permissions": [
+        "coupons",
+        "catalog"
+      ],
+      "createdAt": "2026-02-05T14:30:00Z"
+    },
+    {
+      "id": "vemp_luxe_1",
+      "shopId": "shop_luxe_threads",
+      "name": "Mateo Rossi",
+      "email": "mateo.design@luxethreads.com",
+      "roleTitle": "Apparel Studio & Catalog Lead",
+      "permissions": [
+        "catalog",
+        "settings"
+      ],
+      "createdAt": "2026-02-01T09:15:00Z"
+    },
+    {
+      "id": "vemp_luxe_2",
+      "shopId": "shop_luxe_threads",
+      "name": "Camila Gomez",
+      "email": "camila.ops@luxethreads.com",
+      "roleTitle": "Fulfillment & Finance Associate",
+      "permissions": [
+        "orders",
+        "finance"
+      ],
+      "createdAt": "2026-02-12T11:00:00Z"
+    },
+    {
+      "id": "vemp_roast_1",
+      "shopId": "shop_artisanal_roast",
+      "name": "Noah Bennett",
+      "email": "noah@craftroast.com",
+      "roleTitle": "Roastery Operations & Vouchers",
+      "permissions": [
+        "orders",
+        "catalog",
+        "coupons"
+      ],
+      "createdAt": "2026-02-14T08:00:00Z"
+    }
+  ]
+}
